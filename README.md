@@ -1,5 +1,10 @@
 # dataview
 
+## Log
+### 2022-10-06
+- initialize project
+- upgrade login
+
 ## Project setup
 ```
 yarn install
