@@ -3,12 +3,34 @@
 html {
     width: 100%;
     height: 100%;
+
     body {
         width: 1920px;
         height: 1080px;
         position: relative;
         transform-origin: 0 0 0;
     }
+}
+
+.txl {
+    font-family: txl;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.txb {
+    font-family: txb;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.ubm {
+    font-family: ub-m;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
 }
 
 .page {

@@ -14,6 +14,16 @@ const routes = [
     component: Login
   },
   {
+    path: '/list',
+    name: 'List',
+    component: () => import('../views/List')
+  },
+  {
+    path: '/device',
+    name: 'Device',
+    component: () => import('../views/Device')
+  },
+  {
     path: '/404',
     name: 'NotFound',
     component: () => import('../views/NotFound')

@@ -2,8 +2,8 @@
   <div class="page login" id="Login">
     <div class="tt"><img src="../../assets/images/login_tt.png"></div>
     <div class="login-form">
-      <input type="text" placeholder="用户名">
-      <input type="password" placeholder="密码">
+      <input type="text" placeholder="用户名" value="admin">
+      <input type="password" placeholder="密码" value="123456">
       <button @click="to_home">登录</button>
     </div>
     <div class="copy">
