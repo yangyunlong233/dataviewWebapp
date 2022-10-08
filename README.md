@@ -1,9 +1,12 @@
 # dataview
 
 ## Log
+### 2022-10-08
+- modify map enterprise part, add animation and v-bind data
 ### 2022-10-06
 - initialize project
 - upgrade login
+- done this version
 
 ## Project setup
 ```

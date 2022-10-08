@@ -3,19 +3,62 @@
     <div class="enterprise">
       <div class="prev"><img src="../../../assets/images/icon_arrow_prev.svg"></div>
       <div class="next"><img src="../../../assets/images/icon_arrow_next.svg"></div>
-      <div class="en-cont">
-        <img src="../../../assets/images/icon_map_enterprise.svg">
-        <h4><i class="txb">勐海县六大茶山茶业有限公司</i><span class="txl">23423 万元</span></h4>
-        <div class="line"><i style="width: 88%"></i></div>
-        <div class="info txl">当地产值排名第 1<span class="txl">52%</span></div>
-      </div>
+      <ul>
+        <li v-for="item, index in chartData" :key="index" v-show="index == count">
+          <div class="en-cont">
+            <img src="../../../assets/images/icon_map_enterprise.svg">
+            <h4><i class="txb">{{item.name}}</i><span class="txl">{{item.rem}}万元</span></h4>
+            <div class="line"><i :style="{width: item.x}"></i></div>
+            <div class="info txl">当地产值排名第{{item.ps}}<span class="txl">{{item.x}}</span></div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'mapEnterprise'
+  name: 'mapEnterprise',
+  data () {
+    return {
+      count: 0,
+      chartData: [
+        {
+          name: '陕西东裕生物科技股份有限公司',
+          rmb: '12000',
+          x: '85%',
+          ps: '1'
+        },
+        {
+          name: '宁强县千山茶业公司',
+          rmb: '5800',
+          x: '76%',
+          ps: '2'
+        },
+        {
+          name: '南郑县汉山茶叶有限公司',
+          rmb: '5650',
+          x: '89%',
+          ps: '3'
+        }
+      ]
+    }
+  },
+  mounted () {
+    this.setAnimation()
+  },
+  methods: {
+    setAnimation () {
+      setInterval(() => {
+        if (this.count < this.chartData.length - 1) {
+          this.count++
+        } else {
+          this.count = 0
+        }
+      }, 2000)
+    }
+  }
 }
 </script>
 
