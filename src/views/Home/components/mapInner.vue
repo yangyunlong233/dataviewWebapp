@@ -51,10 +51,46 @@ export default {
           }]
         }]
       }
-      this.mychart.on('click', function (params) {
-        console.log(params)
-      })
       this.mychart.setOption(option)
+      this.mychart.on('click', (params) => {
+        // const name = params.name
+        console.log(params)
+        switch (params.name) {
+          case '城固县':
+            this.$router.push('/mapinner?aera=chengguxian')
+            break
+          case '西乡县':
+            this.$router.push('/mapinner?aera=xixiangxian')
+            break
+          case '勉县':
+            this.$router.push('/mapinner?aera=mianxian')
+            break
+          case '留坝县':
+            this.$router.push('/mapinner?aera=liubaxian')
+            break
+          case '略阳县':
+            this.$router.push('/mapinner?aera=lueyangxian')
+            break
+          case '宁强县':
+            this.$router.push('/mapinner?aera=ningqiangxian')
+            break
+          case '汉台区':
+            this.$router.push('/mapinner?aera=hantaiqu')
+            break
+          case '南政区':
+            this.$router.push('/mapinner?aera=nanzhengqu')
+            break
+          case '镇巴县':
+            this.$router.push('/mapinner?aera=zhenbaxian')
+            break
+          case '佛坪县':
+            this.$router.push('/mapinner?aera=fopingxian')
+            break
+          case '洋县':
+            this.$router.push('/mapinner?aera=yangxian')
+            break
+        }
+      })
     })
   }
 }

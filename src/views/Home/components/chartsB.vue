@@ -127,7 +127,7 @@ export default {
   },
   methods: {
     setAnimation () {
-      setInterval(() => { this.show = !this.show }, 5000)
+      setInterval(() => { this.show = !this.show }, 3000)
     }
   },
   components: {

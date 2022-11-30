@@ -24,6 +24,11 @@ const routes = [
     component: () => import('../views/Device')
   },
   {
+    path: '/mapinner',
+    name: 'MapInner',
+    component: () => import('../views/MapInner')
+  },
+  {
     path: '/404',
     name: 'NotFound',
     component: () => import('../views/NotFound')

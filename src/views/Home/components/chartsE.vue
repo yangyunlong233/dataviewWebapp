@@ -1,8 +1,12 @@
 <template>
   <div class="charts-e" id="chartsE">
-    <charstTitle cn="茶叶品种年产量" en="Annual yield of tea varieties" />
+    <charstTitle cn="茶产区实况" en="Annual yield of tea varieties" />
     <div class="cover">
-      <img src="../../../assets/images/charts_e_cover.jpg">
+      <img v-show="(img === 1)" src="../../../assets/images/e/1.jpg">
+      <img v-show="(img === 2)" src="../../../assets/images/e/2.jpg">
+      <img v-show="(img === 3)" src="../../../assets/images/e/3.jpg">
+      <img v-show="(img === 4)" src="../../../assets/images/e/4.jpg">
+      <img v-show="(img === 5)" src="../../../assets/images/e/5.jpg">
     </div>
     <div class="cont">
       <div class="prev"><img src="../../../assets/images/icon_arrow_prev.svg"></div>
@@ -30,11 +34,22 @@ export default {
   name: 'chartsE',
   data () {
     return {
-      chartData: []
+      chartData: [],
+      img: 1,
+      op: 1
     }
   },
   components: {
     charstTitle
+  },
+  mounted () {
+    setInterval(() => {
+      if (this.img === 5) {
+        this.img = 1
+      } else {
+        this.img++
+      }
+    }, 4200)
   }
 }
 </script>
@@ -110,5 +125,15 @@ export default {
         }
       }
     }
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all .8s ease;
+}
+
+.v-enter,
+.v-leave-to {
+  transform: translateX(100px);
+  opacity: 0;
 }
 </style>
